@@ -1,0 +1,8 @@
+type Share {
+    id: ID
+    name: String!
+    code: String!
+    avgPrice: String!
+    noShares: String!
+    url: String!
+}

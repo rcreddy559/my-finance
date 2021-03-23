@@ -1,0 +1,5 @@
+type Company {
+    id: String
+    name: String
+    code: String
+}

@@ -1,0 +1,11 @@
+type VolumeShockers {
+    id: Int
+    date: String
+    companyName: String
+    sector: String
+    lastPrice: String
+    percentageChg: String
+    volume: String
+    volumeChg: String
+}
+
