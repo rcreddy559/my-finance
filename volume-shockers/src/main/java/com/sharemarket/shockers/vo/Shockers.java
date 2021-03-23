@@ -1,11 +1,11 @@
-package com.market.vo;
+package com.sharemarket.shockers.vo;
 
-import com.market.entites.VolumeShockersEntity;
-import com.market.utils.MarketUtil;
 import java.time.LocalDate;
 
-public class VolumeShockers {
-    private Long id;
+import com.sharemarket.shockers.utils.ShockersUtil;
+
+public class Shockers {
+  private Long id;
     private LocalDate date;
     private String companyName;
     private String sector;
@@ -14,9 +14,9 @@ public class VolumeShockers {
     private Long volume;
     private Long volumeChg;
 
-    public VolumeShockers() { }
+    public Shockers() { }
 
-    public VolumeShockers(Long id, LocalDate date, String companyName, String sector, Double lastPrice, Double percentageChg, Long volume, Long volumeChg) {
+    public Shockers(Long id, LocalDate date, String companyName, String sector, Double lastPrice, Double percentageChg, Long volume, Long volumeChg) {
         this.id = id;
         this.date = date;
         this.companyName = companyName;
@@ -28,7 +28,7 @@ public class VolumeShockers {
     }
 
 
-    public VolumeShockers(LocalDate date, String companyName, String sector, Double lastPrice, Double percentageChg, Long volume, Long volumeChg) {
+    public Shockers(LocalDate date, String companyName, String sector, Double lastPrice, Double percentageChg, Long volume, Long volumeChg) {
         this.date = date;
         this.companyName = companyName;
         this.sector = sector;
@@ -38,8 +38,8 @@ public class VolumeShockers {
         this.volumeChg = volumeChg;
     }
 
-    public static VolumeShockers of(VolumeShockersEntity entity) {
-        return new VolumeShockers(
+    public static Shockers of(ShockersEntity entity) {
+        return new Shockers(
                 entity.getId(),
                 entity.getDate(),
                 entity.getCompanyName(),
@@ -52,22 +52,22 @@ public class VolumeShockers {
     }
 
 
-    public static VolumeShockersEntity of(VolumeShockers volumeShockers) {
-        return new VolumeShockersEntity(
-                volumeShockers.getDate(),
-                volumeShockers.getCompanyName(),
-                volumeShockers.getSector(),
-                volumeShockers.getLastPrice(),
-                volumeShockers.getPercentageChg(),
-                volumeShockers.getVolume(),
-                volumeShockers.getVolumeChg()
+    public static ShockersEntity of(Shockers Shockers) {
+        return new ShockersEntity(
+                Shockers.getDate(),
+                Shockers.getCompanyName(),
+                Shockers.getSector(),
+                Shockers.getLastPrice(),
+                Shockers.getPercentageChg(),
+                Shockers.getVolume(),
+                Shockers.getVolumeChg()
         );
     }
 
 
-    public static VolumeShockers of(String[] split) {
-        return new VolumeShockers(
-                MarketUtil.convertDate(split[0]),
+    public static Shockers of(String[] split) {
+        return new Shockers(
+            ShockersUtil.convertDate(split[0]),
                 split[1],
                 split[2],
                 Double.valueOf(split[3]),
@@ -145,5 +145,5 @@ public class VolumeShockers {
     public String toString() {
         
         return super.toString();
-    }
+    }  
 }

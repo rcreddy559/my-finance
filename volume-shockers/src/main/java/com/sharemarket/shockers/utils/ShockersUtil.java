@@ -1,10 +1,8 @@
-package com.market.utils;
+package com.sharemarket.shockers.utils;
 
 import java.time.LocalDate;
 
-public class MarketUtil {
-    private MarketUtil(){}
-
+public class ShockersUtil {
     public static LocalDate convertDate(String date) {
         var dateFormat = date.split("-");
         return LocalDate.of(Integer.parseInt(dateFormat[2]),
