@@ -1,0 +1,15 @@
+query GET_BANK_ACCOUNT {
+    getDevidends {
+        id
+        name
+    }
+}
+
+#
+mutation CREATE_BANK_ACCOUNT {
+#    createBankAccount(input: {firstName: "Ravi"}) {
+#        id
+#        currency
+#    }
+    saveVolumeShockers (input: ["ITC", "Airtel"])
+}

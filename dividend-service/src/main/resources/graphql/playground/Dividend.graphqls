@@ -1,0 +1,4 @@
+type Dividend {
+    id: Int
+    name: String
+}

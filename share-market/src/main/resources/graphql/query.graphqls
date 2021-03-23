@@ -2,5 +2,4 @@ type Query {
     getShares: Share
     getShare: Share
     getCompanies: [Company]
-    getVolumeShockers:[VolumeShockers]
 }
