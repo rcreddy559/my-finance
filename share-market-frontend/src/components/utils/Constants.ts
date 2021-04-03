@@ -3,6 +3,7 @@ export const SET_USER = "set_user";
 export const SET_USERS = "set_users";
 export const HOME_PAGE = "HOME_PAGE";
 export const SET_CURRENT_PAGE = "set_current_page";
+export const SGX_NIFTY = "SGX_NIFTY"
 
 export const BONUS = "companyActions/BONUS";
 export const DIVIDEND = "companyActions/dividend";

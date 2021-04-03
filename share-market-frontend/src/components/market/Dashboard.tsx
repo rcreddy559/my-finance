@@ -3,6 +3,7 @@ import { MarketContext } from '../hooks/MarketProvider';
 import * as Constants from '../utils/Constants';
 import { BonusPage } from './pages/bonus/BonusPage';
 import { DividendPage } from './pages/dividend/DividendPage';
+import { SgxNiftyDashboar } from './pages/sgxnifty/SgxNiftyDashboar';
 import { UserHome } from './pages/user/UserHome';
 import { VolumeShockers } from './pages/volumeshockers/VolumeShockers';
 
@@ -24,6 +25,8 @@ const getCurrentPage = (currentPage: string) => {
             return <BonusPage/>
         case Constants.SET_USERS: 
             return <UserHome/>
+        case Constants.SGX_VS_NIFTY_50:
+            return <SgxNiftyDashboar/>
         default:
             <BonusPage/>
     }

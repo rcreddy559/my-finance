@@ -1,0 +1,3 @@
+type Mutation {
+    saveDividend(input:[String]): String!
+}

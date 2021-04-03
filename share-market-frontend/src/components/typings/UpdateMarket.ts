@@ -6,4 +6,6 @@ export default interface UpdateMarket {
     SetCurrentPage(page: string):void;
     SendMail(email: string, list: Dividend[]):void;
     SetDividend(dividend: Dividend[]):void;
+    getSgxNiftys():void;
+    setTodaySgxNifty(currentSgx:string, preOpenNifty:string):void;
 }

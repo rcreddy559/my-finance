@@ -1,4 +1,5 @@
 import Dividend from "./Dividend";
+import { SgxNiftyDetails } from "./sgx/sgxNiftyDetails";
 import User from "./User";
 
 export interface MarketState {
@@ -8,4 +9,5 @@ export interface MarketState {
     message: string;
     currentPage: string;
     dividend: Dividend[]
+    sgxNiftyDetails: SgxNiftyDetails
 }

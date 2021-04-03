@@ -1,6 +1,4 @@
-import {
-    SET_CURRENT_PAGE,SET_DIVIDEND,SET_USER, SET_USERS
-} from "../../utils/Constants";
+import * as Constants from "../../utils/Constants";
 import {MarketState} from "../../typings/MarketState";
 import { MarketAction } from "../../typings/MarketAction";
 
@@ -10,27 +8,37 @@ export function marketReducer(state: MarketState, action: MarketAction): MarketS
         message: ""
     }
     switch (action.type) {
-        case SET_USER: {
+        case Constants.SET_USER: {
             return {...state, 
                     user: action.user
                 }
         }
-        case SET_USERS: {
+        case Constants.SET_USERS: {
             return {...state, 
                     users: action.users
                 }
         }
-        case SET_CURRENT_PAGE: {
+        case Constants.SET_CURRENT_PAGE: {
             return {...state, 
                 currentPage: action.page
             }
         }
-        case SET_DIVIDEND: {
+        case Constants.SET_DIVIDEND: {
             return {...state, 
                 dividend: action.dividend
             }
         }
-
+        case Constants.SGX_VS_NIFTY_50: {
+            return {...state, 
+                sgxNiftyDetails: action.sgxNiftyDetails}
+        }
+        case Constants.SGX_NIFTY: {
+            const sgxNiftyDetails = {
+                ...state.sgxNiftyDetails,
+                getTodaySgxNifty: action.getTodaySgxNifty
+            };
+            return {...state, sgxNiftyDetails}
+        }
         default:
             return state;
     }
