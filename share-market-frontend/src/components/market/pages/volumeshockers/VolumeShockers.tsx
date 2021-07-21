@@ -19,8 +19,8 @@ export const VolumeShockers: FC = () => {
             //  console.log(result);
 
             // console.log(result)
-            var parser = new DOMParser();
-            var doc = parser.parseFromString(result, 'text/html');
+            let parser = new DOMParser();
+            let doc = parser.parseFromString(result, 'text/html');
             const list = doc.getElementsByClassName("bsr_table bsr_table930 MT20 PR hist_tbl")[0];
             const trList = list.childNodes[1].childNodes[3].childNodes;
             let array: string[] = [];

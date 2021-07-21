@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import './w3.css';
 import { MarketProvider } from './components/hooks/MarketProvider';
 import { Dashboard } from './components/market/Dashboard';
 import { ExpatrioHeader } from './components/market/pages/header/MarketHeader';

@@ -18,6 +18,11 @@ interface SetCurrentPage {
     page: string
 }
 
+interface SetCompanyPage {
+    type: typeof Constants.SET_COMPANY_PAGE,
+    page: string
+}
+
 interface SetDividend {
     type: typeof Constants.SET_DIVIDEND,
     dividend: Dividend[]
@@ -39,3 +44,4 @@ export type MarketAction = SetUser
                             | SetDividend 
                             | SetSgxNiftys
                             | SetTodaySgxNifty
+                            | SetCompanyPage

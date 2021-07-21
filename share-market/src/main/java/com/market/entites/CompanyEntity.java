@@ -3,13 +3,17 @@ package com.market.entites;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "company")
+@Table(
+        name = "company",
+        uniqueConstraints = {@UniqueConstraint(columnNames = {"code"})}
+        )
 public class CompanyEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
+    @Column(unique = true)
     private String code;
 
     public Long getId() {

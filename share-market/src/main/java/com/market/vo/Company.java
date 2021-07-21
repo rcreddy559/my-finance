@@ -3,41 +3,49 @@ package com.market.vo;
 import com.market.entites.CompanyEntity;
 
 public class Company {
-    private Long id;
-    private String name;
-    private String code;
-    public Company() {}
-    public Company(String name) {
-        this.name = name;
-    }
+	private Long id;
+	private String name;
+	private String code;
 
-    public Company(CompanyEntity companyEntity) {
-        this.id = companyEntity.getId();
-        this.name = companyEntity.getName();
-        this.code = companyEntity.getCode();
-    }
+	public Company() {
+	}
 
-    public Long getId() {
-        return id;
-    }
+	public Company(String name) {
+		this.name = name;
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public Company(CompanyEntity companyEntity) {
+		this.id = companyEntity.getId();
+		this.name = companyEntity.getName();
+		this.code = companyEntity.getCode();
+	}
 
-    public String getName() {
-        return name;
-    }
+	public Company(String name, String code) {
+		this.name = name;
+		this.code = code;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public String getCode() {
-        return code;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public void setCode(String code) {
-        this.code = code;
-    }
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
 }

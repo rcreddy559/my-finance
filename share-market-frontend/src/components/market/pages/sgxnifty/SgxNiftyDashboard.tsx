@@ -33,7 +33,7 @@ function getModalStyle() {
     };
 }
 
-export const SgxNiftyDashboar:FC = () => {
+export const SgxNiftyDashboard:FC = () => {
     const {getSgxNiftys, sgxNiftyDetails, setTodaySgxNifty} = useContext(MarketContext);
     // const [sgxNiftys, setSgxNiftys] = useState([] as SgxNifty[])
     const {getSgxNifty, getTodaySgxNifty} = sgxNiftyDetails;

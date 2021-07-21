@@ -1,0 +1,33 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00000001048753ec, pid=65556, tid=42755
+#
+# JRE version: OpenJDK Runtime Environment Corretto-15.0.2.7.1 (15.0.2+7) (build 15.0.2+7)
+# Java VM: OpenJDK 64-Bit Server VM Corretto-15.0.2.7.1 (15.0.2+7, mixed mode, sharing, tiered, compressed oops, g1 gc, bsd-amd64)
+# Problematic frame:
+# C  [libjimage.dylib+0x33ec]  ImageFileReader::find_location_index(char const*, unsigned long long*) const+0x2c
+#
+# No core dump will be written. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   https://github.com/corretto/corretto-jdk/issues/
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -XX:+ShowCodeDetailsInExceptionMessages -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:49574 -ea -javaagent:/Users/shobha/eclipse/jee-2021-06/Eclipse.app/Contents/Eclipse/configuration/org.eclipse.osgi/406/0/.cp/lib/javaagent-shaded.jar -Dfile.encoding=UTF-8 org.eclipse.jdt.internal.junit.runner.RemoteTestRunner -version 3 -port 49573 -testLoaderClass org.eclipse.jdt.internal.junit5.runner.JUnit5TestLoader -loaderpluginname org.eclipse.jdt.junit5.runtime -classNames com.market.service.CompanyServiceTest
+
+Host: MacBookPro14,1 x86_64 2300 MHz, 4 cores, 8G, Darwin 20.5.0
+Time: Tue Jul 20 13:53:15 2021 CEST elapsed time: 854.640432 seconds (0d 0h 14m 14s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007ff19c01ee00):  JavaThread "Signal Dispatcher" daemon [_thread_in_vm, id=42755, stack(0x000070000c5cc000,0x000070000c6cc000)]
+
+Stack: [0x000070000c5cc000,0x000070000c6cc000],  sp=0x000070000c6ca360,  free space=1016k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libjimage.dylib+0x33ec]  ImageFileReader::find_location_index(char const*, unsigned long long*) const+0x2c
+C  [libjimage.dylib+0x38d1]  JIMAGE_FindResource+0xd1
+V  [libjvm.dylib+0x2928ea]  ClassPathImageEntry::open_stream_for_loader(char const*, ClassLoaderData*, Thread*)+0x7a
+V  [libjvm.dylib+0x296755]  ClassLoader::load_class(Symbol*, bool, Thread*)+0x155

@@ -23,6 +23,9 @@ export function useMarket(): MarketScheme {
         SetCurrentPage(page:string) {
            dispatch({type: Constants.SET_CURRENT_PAGE, page});
         },
+        SetCompanyPage(page: string) {
+            dispatch({type: Constants.SET_COMPANY_PAGE, page});
+        },
         SendMail(email: string, list:Dividend[]) {
             sendDividend(email, list, dispatch)
         },

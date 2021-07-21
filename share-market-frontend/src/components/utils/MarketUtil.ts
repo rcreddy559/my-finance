@@ -2,7 +2,8 @@ import GraphQLQuery from "../typings/GraphQLQuery"
 import {MarketState} from "../typings/MarketState"
 import { SgxNiftyDetails } from "../typings/sgx/sgxNiftyDetails"
 import User from "../typings/User"
-import { DIVIDEND } from "./Constants"
+import { COMPANY_DASHBOARD } from "./Constants"
+import Company from "../typings/Company";
 
 export function getInitialState(): MarketState  {
 
@@ -11,9 +12,12 @@ export function getInitialState(): MarketState  {
         users: [] as User[],
         message: "",
         isLoading: false,
-        currentPage: DIVIDEND,
+        currentPage: COMPANY_DASHBOARD,
+        companyCurrentPage: "",
         dividend: [],
-        sgxNiftyDetails: {} as SgxNiftyDetails
+        sgxNiftyDetails: {} as SgxNiftyDetails,
+        companies: [],
+        company: {} as Company
      }
 }
 

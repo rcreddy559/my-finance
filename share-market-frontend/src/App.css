@@ -4,12 +4,14 @@ table {
 
 table td {
   padding-top: 20px;
+  margin: 10px;
 }
 
 table th {
   padding-top: 20px;
   background-color: #58a3b9;
   font-weight: bold;
+  margin: 10px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -40,3 +42,4 @@ table th {
     transform: rotate(360deg);
   }
 }
+

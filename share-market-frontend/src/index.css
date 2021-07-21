@@ -16,3 +16,7 @@ code {
   text-align: center;
   align-items: center;
 }
+
+.company-details {
+  margin: 0 10% 10% 10%;
+}

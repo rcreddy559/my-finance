@@ -2,6 +2,7 @@ import React, { FC, useContext } from 'react';
 import { MarketContext } from '../../../hooks/MarketProvider';
 import * as Constants from '../../../utils/Constants';
 import { Button, ButtonGroup } from '@material-ui/core';
+import {COMPANY_DASHBOARD} from "../../../utils/Constants";
 
 export const ExpatrioHeader: FC = () => {
     const { currentPage, 
@@ -28,8 +29,12 @@ export const ExpatrioHeader: FC = () => {
                     color={primaryOrDefault(currentPage,Constants.VOLUME_SHOCKERS)}
                     onClick={() => SetCurrentPage(Constants.VOLUME_SHOCKERS)}
                     >Volume Shockers</Button>
-
-</ButtonGroup>
+                <Button variant="contained"
+                        color={primaryOrDefault(currentPage,Constants.COMPANY_DASHBOARD)}
+                        onClick={() => SetCurrentPage(Constants.COMPANY_DASHBOARD)}
+                >Companies</Button>
+        </ButtonGroup>
+        <div>Current Page: {currentPage}</div>
     </div>
 }
 

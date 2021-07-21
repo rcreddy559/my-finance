@@ -1,0 +1,5 @@
+FROM openjdk:11 as build
+VOLUME /tmp
+COPY build/libs/*.jar app.jar
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
+EXPOSE 8081

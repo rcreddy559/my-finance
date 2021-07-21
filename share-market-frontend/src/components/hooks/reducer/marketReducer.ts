@@ -23,6 +23,11 @@ export function marketReducer(state: MarketState, action: MarketAction): MarketS
                 currentPage: action.page
             }
         }
+        case Constants.SET_COMPANY_PAGE: {
+            return {...state,
+                companyCurrentPage: action.page
+            }
+        }
         case Constants.SET_DIVIDEND: {
             return {...state, 
                 dividend: action.dividend
